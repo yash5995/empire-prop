@@ -1,0 +1,105 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>EMPIRE PROPERTIES</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Travel Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+
+	<!-- css files -->
+	<link rel="stylesheet" href="{% static 'css/style1.css' %}" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<!-- //css files -->
+
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body style="background:url({%static 'img/housing3.jpg'%});background-size:cover">
+	<!-- title -->
+	<h1>
+		<span>E</span>mpire
+		<span>P</span>roperties
+<!--		<span>R</span>egistration-->
+<!--		<span>F</span>orm -->
+	</h1>
+	<!-- //title -->
+
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form action="{% url 'entry' %}" method="post">
+			{% csrf_token %}
+<!--			<img src="{% static 'img/housing3.jpg' %}" alt="">-->
+			<h2>Register Your Account</h2>
+            <div class="form-style-agile">
+				<input placeholder="First Name" name="fName" type="text" required="">
+			</div>
+            <div class="form-style-agile">
+				<input placeholder="Last Name" name="lName" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<input placeholder="Username" name="Name" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<input placeholder="Password" name="Password" type="password" required="">
+			</div>
+            <div class="form-style-agile">
+				<input placeholder="Confirm Password" name="CPassword" type="password" required="">
+			</div>
+
+			<!-- checkbox -->
+			<div class="wthree-text">
+				<ul>
+					<li>
+						<!-- switch -->
+						<div class="checkout-w3l">
+							<div class="demo5">
+<!--								<div class="switch demo3">-->
+<!--									<input type="checkbox">-->
+<!--									<label>-->
+<!--										<i></i>-->
+<!--									</label>-->
+<!--								</div>-->
+							</div>
+						</div>
+						<!-- //checkout -->
+					</li>
+					<li>
+					</li>
+				</ul>
+			</div>
+			<!-- //switch -->
+			<input type="submit" value="Sign Up">
+		</form>
+	</div>
+	<div class="clear"></div>
+	<!-- //content -->
+
+	<!-- copyright -->
+
+	<!-- //copyright -->
+
+</body>
+
+</html>

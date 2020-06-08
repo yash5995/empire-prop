@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block content %}
+<body style="background:url({%static 'img/housing3.jpg' %});background-repeat: no-repeat; background-size:cover">
+    <div style="margin-left:15%;width:200px;height:10px">
+    <h1 style="color:#ffffff;font-size:35px;font-style:italic"> The best place to find the right price </h1>
+    </div>
+    <div style="margin-left:60%;margin-top:2%">
+<form action="{% url 'prediction' %}" method="POST">
+    {% csrf_token %}
+
+<select id="rooms" name="rooms" style="vertical-align: middle;color:black; background-color:white;margin-left:50%">
+    <option value="roomsize">Room Size</option>
+    <option value="1" {% if rooms == 1 %} selected {% endif %}>1</option>
+    <option value="2" {% if rooms == 2 %} selected {% endif %}>2</option>
+    <option value="3" {% if rooms == 3 %} selected {% endif %}>3</option>
+    <option value="4"{% if rooms == 4 %} selected {% endif %}>4</option>
+    <option value="5"{% if rooms == 5 %} selected {% endif %}>5</option>
+    <option value="6"{% if rooms == 6 %} selected {% endif %}>6</option>
+    <option value="7"{% if rooms == 7 %} selected {% endif %}>7</option>
+    <option value="8"{% if rooms == 8 %} selected {% endif %}>8</option>
+</select>
+<select id="area" name="area" style="vertical-align: middle;color:black; background-color:white;margin-left:50%">
+    <option value="Ambavadi" {% if area == 'Ambavadi' %} selected {% endif %}> Ambavadi</>
+    <option value="Ambli" {% if area == 'Ambli' %} selected {% endif %}> Ambli</option>
+    <option value="Amraiwadi"{% if area == 'Amraiwadi' %} selected {% endif %}>Amraiwadi </option>
+    <option value="Asarwa"{% if area == 'Asarva' %} selected {% endif %}> Asarwa</option>
+    <option value="Ashok Vatika"{% if area == 'Ashok Vatika' %} selected {% endif %}>Ashok Vatika </option>
+     <option value="Ashram Road"{% if area == 'Ashram Road' %} selected {% endif %}>Ashram Road </option>
+     <option value="Aslali"{% if area == 'Aslali' %} selected {% endif %}>Aslali </option>
+     <option value="Astodia Chakla"{% if area == 'Astodia Chakla' %} selected {% endif %}>Astodia Chakla </option>
+     <option value="Ayojan Nagar"{% if area == 'Ayojan Nagar' %} selected {% endif %}>Ayojan Nagar </option>
+     <option value="Bagodra"{% if area == 'Bagodra' %} selected {% endif %}> Bagodra</option>
+     <option value="Bapunagar"{% if area == 'Bapunagar' %} selected {% endif %}>Bapunagar </option>
+     <option value="Bavla"{% if area == 'Bavla' %} selected {% endif %}> Bavla</option>
+     <option value="Bhadaj"{% if area == 'Bhadaj' %} selected {% endif %}>Bhadaj </option>
+     <option value="Bhadra"{% if area == 'Bhadra' %} selected {% endif %}>Bhadra </option>
+     <option value="Bhat"{% if area == 'Bhat' %} selected {% endif %}> Bhat</option>
+     <option value="Bodakdev"{% if area == 'Bodakdev' %} selected {% endif %}>Bodakdev </option>
+     <option value="Bopal"{% if area == 'Bopal' %} selected {% endif %}>Bopal </option>
+     <option value="CG Road"{% if area == 'CG Road' %} selected {% endif %}>CG Road </option>
+    <option value="Chanakyapuri" {% if area == 'Chanakyapuri' %} selected {% endif %}> Chanakyapuri</option>
+     <option value="Chandkheda"{% if area == 'Chandkheda' %} selected {% endif %}> Chandkheda</option>
+     <option value="Chandlodia"{% if area == 'Chandlodia' %} selected {% endif %}> Chandlodia</option>
+     <option value="Chharodi"{% if area == 'Chharodi' %} selected {% endif %}> Changodhar</option>
+     <option value="CTM"{% if area == 'CTM' %} selected {% endif %}> CTM</option>
+     <option value="CTM Ramol Road"{% if area == 'CTM Ramol Road' %} selected {% endif %}>CTM Ramol Road </option>
+     <option value="Dariyapur"{% if area == 'Dariyapur' %} selected {% endif %}>Dariyapur </option>
+     <option value="Daxini Society"{% if area == 'Daxini Society' %} selected {% endif %}> Daxini Society</option>
+     <option value="Dholera"{% if area == 'Dholera' %} selected {% endif %}> Dholera</option>
+     <option value="Dudheshwar"{% if area == 'Dudheshwar' %} selected {% endif %}> Dudheshwar</option>
+     <option value="Ellisbridge"{% if area == 'Ellisbridge' %} selected {% endif %}> Ellisbridge</option>
+     <option value="Fatasa pol"{% if area == 'Fatasa Pol' %} selected {% endif %}> Fatasa Pol</option>
+     <option value="Gandhinagar Road"{% if area == 'Gandhinagar Road' %} selected {% endif %}> Gandhinagar Road</option>
+     <option value="Geratpur"{% if area == 'Geratpur' %} selected {% endif %}> Geratpur</option>
+     <option value="Ghatlodiya"{% if area == 'Ghatlodiya' %} selected {% endif %}> Ghatlodiya</option>
+     <option value="Ghodasar"{% if area == 'Ghodasar' %} selected {% endif %}> Ghodasar</option>
+     <option value="Ghuma"{% if area == 'Ghuma' %} selected {% endif %}> Ghuma</option>
+     <option value="Godhavi"{% if area == 'Godhavi' %} selected {% endif %}> Godhavi</option>
+     <option value="Gokuldham"{% if area == 'Gokuldham' %} selected {% endif %}>Gokuldham </option>
+     <option value="Gota"{% if area == 'Gota' %} selected {% endif %}>Gomtipur </option>
+     <option value="Gulbai Tekra"{% if area == 'Gulbai Tekra' %} selected {% endif %}> Gulbai Tekra</option>
+     <option value="Gurukul"{% if area == 'Gurukul' %} selected {% endif %}> Gurukul</option>
+     <option value="Hansol"{% if area == 'Hansol' %} selected {% endif %}> Hansol</option>
+     <option value="Hathijan"{% if area == 'Hathijan' %} selected {% endif %}> Hathijan</option>
+     <option value="Hebatpur"{% if area == 'Hebatpur' %} selected {% endif %}> Hebatpur</option>
+    <option value="Hatkeshwar"{% if area == 'Hatkeshwar' %} selected {% endif %}>Hatkeshwar </option>
+     <option value="Isanpur"{% if area == 'Isanpur' %} selected {% endif %}>Isanpur </option>
+    <option value="Jagatpur"{% if area == 'Jagatpur' %} selected {% endif %}> Jagatpur</option>
+    <option value="Jivraj Park"{% if area == 'Jivraj Park' %} selected {% endif %}> Jivraj Park</option>
+     <option value="Jodhpur"{% if area == 'Jodhpur' %} selected {% endif %}>Jodhpur </option>
+     <option value="Jodhpur village"{% if area == 'Jodhpur Village' %} selected {% endif %}>Jodhpur village </option>
+     <option value="Juhapura"{% if area == 'Juhapura' %} selected {% endif %}> Juhapura</option>
+     <option value="Kalupur"{% if area == 'Kalupur' %} selected {% endif %}> Kalupur</option>
+     <option value="Kankaria"{% if area == 'Kankaria' %} selected {% endif %}> Kankaria</option>
+     <option value="Khadia"{% if area == 'Khadia' %} selected {% endif %}> Khadia</option>
+     <option value="Khanpur"{% if area == 'Khanpur' %} selected {% endif %}> Khanpur</option>
+     <option value="Khodiyar"{% if area == 'Khodiyar' %} selected {% endif %}> Khodiyar</option>
+     <option value="Khokhra"{% if area == 'Khokhra' %} selected {% endif %}> Khokhra</option>
+     <option value="Kolat"{% if area == 'Kolat' %} selected {% endif %}> Kolat</option>
+     <option value="Kotarpur"{% if area == 'Kotarpur' %} selected {% endif %}> Kotarpur</option>
+     <option value="Koteshwar"{% if area == 'Koteshwar' %} selected {% endif %}> Koteshwar</option>
+     <option value="Lambha"{% if area == 'Lambha' %} selected {% endif %}> Lambha</option>
+     <option value="Lapkaman"{% if area == 'Lapkaman' %} selected {% endif %}> Lapkaman</option>
+     <option value="Lilapur"{% if area == 'Lilapur' %} selected {% endif %}> Lilapur</option>
+     <option value="Madhupura"{% if area == 'Madhupura' %} selected {% endif %}> Madhupura</option>
+     <option value="Mahadev Nagar"{% if area == 'Mahadev Nagar' %} selected {% endif %}> Mahadev Nagar</option>
+     <option value="Makarba"{% if area == 'Makarba' %} selected {% endif %}> Makarba</option>
+     <option value="Maninagar"{% if area == 'Maninagar' %} selected {% endif %}> Maninagar</option>
+     <option value="Manipur"{% if area == 'Manipur' %} selected {% endif %}> Manipur</option>
+     <option value="Meghani Nagar"{% if area == 'Meghani Nagar' %} selected {% endif %}> Meghani Nagar</option>
+     <option value="Memnagar"{% if area == 'Memnagar' %} selected {% endif %}> Memnagar</option>
+     <option value="Motera"{% if area == 'Motera' %} selected {% endif %}> Motera</option>
+     <option value="Nana Chiloda"{% if area == 'Nana Chiloda' %} selected {% endif %}> Nana Chiloda</option>
+     <option value="Naranpura Road"{% if area == 'Naranpura Road' %} selected {% endif %}> Naranpura Road</option>
+     <option value="Naranpuraa"{% if area == 'Naranpuraa' %} selected {% endif %}> Naranpuraa</option>
+    <option value="Narayan Nagar"{% if area == 'Narayan Nagar' %} selected {% endif %}> Narayan Nagar</option>
+    <option value="Naroda"{% if area == 'Naroda' %} selected {% endif %}> Naroda</option>
+     <option value="Narol"{% if area == 'Narol' %} selected {% endif %}> Narol</option>
+     <option value="Narolgam"{% if area == 'Narolgam' %} selected {% endif %}> Narolgam</option>
+    <option value="Nava Vadaj"{% if area == 'Nava Vadaj' %} selected {% endif %}> Nava Vadaj</option>
+     <option value="Navrangpura"{% if area == 'Navarangpura' %} selected {% endif %}> Navrangpura</option>
+     <option value="Near Nirma University"{% if area == 'Near Nirma University' %} selected {% endif %}> Near Nirma University</option>
+     <option value="Near Vaishnodevi"{% if area == 'Near Vaishnodevi' %} selected {% endif %}> Near Vaishnodevi</option>
+     <option value="Nehru Nagar"{% if area == 'Nehru Nagar' %} selected {% endif %}> Nehru Nagar</option>
+     <option value="New Maninagar"{% if area == 'New Maninagar' %} selected {% endif %}> New Maninagar</option>
+     <option value="New Ranip"{% if area == 'New Ranip' %} selected {% endif %}> New Ranip</option>
+     <option value="Neww CG Road"{% if area == 'Neww CG Road' %} selected {% endif %}> Neww CG Road</option>
+     <option value="Nikol"{% if area == 'Nikol' %} selected {% endif %}> Nikol</option>
+     <option value="Nirnay Nagar"{% if area == 'Nirnay Nagar' %} selected {% endif %}> Nirnay Nagar</option>
+     <option value="Odhav"{% if area == 'Odhav' %} selected {% endif %}> Odhav</option>
+     <option value="Paldi"{% if area == 'Paldi' %} selected {% endif %}> Paldi</option>
+     <option value="Palodia"{% if area == 'Palodia' %} selected {% endif %}> palodia</option>
+     <option value="Prahlad Nagar"{% if area == 'Prahlad Nagar' %} selected {% endif %}> Prahlad Nagar</option>
+     <option value="Rambaug"{% if area == 'Rambaug' %} selected {% endif %}> Rambaug</option>
+     <option value="Ramdev Nagar"{% if area == 'Ramdev Nagar' %} selected {% endif %}> Ramdev Nagar</option>
+     <option value="Rancharda"{% if area == 'Rancharda' %} selected {% endif %}> Rancharda</option>
+     <option value="Ranip"{% if area == 'Ranip' %} selected {% endif %}> Ranip</option>
+     <option value="Sabarmati"{% if area == 'Sabarmati' %} selected {% endif %}> Sabarmati</option>
+     <option value="Sanand"{% if area == 'Sanand' %} selected {% endif %}> Sanand</option>
+     <option value="Sanathal"{% if area == 'Sanathal' %} selected {% endif %}> Sanathal</option>
+    <option value="Santej"{% if area == 'Santej' %} selected {% endif %}> Santej</option>
+     <option value="Saraspur"{% if area == 'Saraspur' %} selected {% endif %}> Saraspur</option>
+     <option value="Sarkhej"{% if area == 'Sarkhej' %} selected {% endif %}> Sarkhej</option>
+     <option value="Satellite"{% if area == 'Satellite' %} selected {% endif %}> Satellite</option>
+     <option value="Science City"{% if area == 'Science City' %} selected {% endif %}> Science City</option>
+     <option value="Shahibaug"{% if area == 'Shahibaug' %} selected {% endif %}> Shahibaug</option>
+     <option value="Shahpur"{% if area == 'Shahpur' %} selected {% endif %}> Shahpur</option>
+     <option value="Shantipura"{% if area == 'Shantipura' %} selected {% endif %}> Shantipura</option>
+     <option value="Shela"{% if area == 'Shela' %} selected {% endif %}> Shela</option>
+     <option value="Shilaj"{% if area == 'Shilaj' %} selected {% endif %}> Shilaj</option>
+     <option value="Shyamal Cross road"{% if area == 'Shyamal Cross Road' %} selected {% endif %}> Shyamal Cross Road</option>
+     <option value="Sindhu Bhavan Marg"{% if area == 'Sindhu Bhavan Marg' %} selected {% endif %}> Sindhu Bhavan Marg</option>
+     <option value="Sola"{% if area == 'Sola' %} selected {% endif %}> Sola</option>
+     <option value="South Bopal"{% if area == 'South Bopal' %} selected {% endif %}> South Bopal</option>
+    <option value="SP Ring Road"{% if area == 'SP Ring Road' %} selected {% endif %}> SP Ring Road</option>
+     <option value="Sughad"{% if area == 'Sughad' %} selected {% endif %}> Sughad</option>
+     <option value="Thakkarbapa Nagar"{% if area == 'Thakkarbapa Nagar' %} selected {% endif %}> Thakkarbapa Nagar</option>
+    <option value="Thaltej"{% if area == 'Thaltej' %} selected {% endif %}> Thaltej</option>
+     <option value="Tragad"{% if area == 'Tragad' %} selected {% endif %}> Tragad</option>
+     <option value="Usmanpura"{% if area == 'Usmanpura' %} selected {% endif %}> Usmanpura</option>
+    <option value="Vadsar"{% if area == 'Vadsar' %} selected {% endif %}> Vadsar</option>
+     <option value="Vaishnodevi"{% if area == 'Vaishnodevi' %} selected {% endif %}> Vaishnodevi</option>
+     <option value="Vasna"{% if area == 'Vasna' %} selected {% endif %}> Vasna</option>
+     <option value="Vastral"{% if area == 'Vastral' %} selected {% endif %}> Vastral</option>
+     <option value="Vastrapur"{% if area == 'vastrapur' %} selected {% endif %}> Vastrapur</option>
+    <option value="Vatva"{% if area == 'Vatva' %} selected {% endif %}> Vatva</option>
+     <option value="Vejalpur"{% if area == 'Vejalpur' %} selected {% endif %}> Vejalpur</option>
+     <option value="Vinzol"{% if area == 'Vinzol' %} selected {% endif %}> Vinzol</option>
+     <option value="Vishala"{% if area == 'Vishala' %} selected {% endif %}> </option>
+      </select>
+    <textarea id="square_foot" name="square_foot" style="vertical-align: middle; width:70px;margin-left:50%; height:12px;overflow:hidden;color:black; background-color:white">{{square_foot}}</textarea>
+    <select id="construction_status" name="construction_status" style="vertical-align: middle;color:black; background-color:white;margin-left:50%">
+        <option value="Ready to move" {% if construction == 'Ready to move' %} selected {% endif %}> Ready to move</option>
+        <option value="Under Construction" {% if construction == 'Under Construction' %} selected {% endif %}>Under Construction</option>
+        <option value="Resale"{% if construction == 'Resale' %} selected {% endif %}>Resale</option>
+    </select>
+    <select id="bathroom" name="bathroom" style="vertical-align: middle;color:black; background-color:white;margin-left:50%">
+        <option value="1" {% if bathroom == 1 %} selected {% endif %}>1</option>
+        <option value="2"{% if bathroom == 2 %} selected {% endif %}>2</option>
+        <option value="3"{% if bathroom == 3 %} selected {% endif %}>3</option>
+        <option value="4"{% if bathroom == 4 %} selected {% endif %}>4</option>
+        <option value="5"{% if bathroom == 5 %} selected {% endif %}>5</option>
+        <option value="6"{% if bathroom == 6 %} selected {% endif %}>6</option>
+        <option value="7"{% if bathroom == 7 %} selected {% endif %}>7</option>
+        <option value="8"{% if bathroom == 8 %} selected {% endif %}>8</option>
+
+    </select>
+    <button style="margin-top:10px;margin-left:50%" id="output">Submit</button>
+        <textarea style="vertical-align: middle; width:70px; height:12px;overflow:hidden;left:50%;margin-left:50%" > {{context}}</textarea>
+
+    </div>
+</form>
+
+
+</body>
+{% endblock %}
+</html>

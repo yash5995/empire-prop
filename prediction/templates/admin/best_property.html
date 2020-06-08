@@ -1,0 +1,335 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EMPIRE PROPERTIES</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"><!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+    <body style="background:#eee">
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+
+                                    <h2 style="color:#ffffff"> Empire Properties</h2>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="{% url 'home' %}">home</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'calculate' %}">Find your price</a>
+
+                                        </li>
+                                        <li><a href="#">Best Properties</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="social_wrap d-flex align-items-center justify-content-end">
+
+                                <div class="number">
+                                    <p>Call us <a href="#">+91 9825916679</a></p>
+                                </div>
+                                <div class="number">
+                                     <a href="{% url 'index' %}" style="margin-left:20px;color:#ffffff">Log Out</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Best Properties</h3>
+                        <p> <a href="index.html">Home</a> / Best Properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin:3%">
+        <form action="{% url 'ganesh' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-right:60px;margin-left:70px">
+        <div style="width:600px;padding-top:5px;height:400px">
+        <img src="{% static 'img/real_estate/ganesh.jpeg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/maple.jpg' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Ganesh Maple Tree</h2>
+                    <h4 style="color:grey;margin:0px"> Ganesh Housing</h4>
+                    <h4 style="color:grey;margin:0px">Memnagar</h4>
+                    <h4 style="color:grey;margin:0px">3,4 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+        <form action="{% url 'goyal' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000">
+        <div style="width:600px;height:400px;padding-top:5px">
+        <img src="{% static 'img/real_estate/goyal riviera elite.jpg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/goyal-&-co logo.jpg' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Goyal Riviera Elite</h2>
+                    <h4 style="color:grey;margin:0px"> Goyal and Co.</h4>
+                    <h4 style="color:grey;margin:0px">Shela</h4>
+                    <h4 style="color:grey;margin:0px">4 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+        <form action="{% url 'keshar' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-right:60px;margin-left:70px;margin-top:20px">
+        <div style="width:600px;padding-top:5px;height:400px">
+        <img src="{% static 'img/real_estate/keshar aalayam.jpg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/keshar logo.png' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Keshar Aalayam</h2>
+                    <h4 style="color:grey;margin:0px"> Keshar Developers</h4>
+                    <h4 style="color:grey;margin:0px">Vaishnaodevi Circle</h4>
+                    <h4 style="color:grey;margin:0px">2 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+        <form action="{% url 'parshwa' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-top:20px">
+        <div style="width:600px;height:400px;padding-top:5px">
+        <img src="{% static 'img/real_estate/parshwa luxuria main.jpg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/parshwa.jpg' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Parshwa Luxuria</h2>
+                    <h4 style="color:grey;margin:0px">Parshwa Infraventures</h4>
+                    <h4 style="color:grey;margin:0px">Bopal</h4>
+                    <h4 style="color:grey;margin:0px">4,5 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+    </form>
+        <form action="{% url 'shree' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-right:60px;margin-left:70px;margin-top:20px">
+        <div style="width:600px;padding-top:5px;height:400px">
+        <img src="{% static 'img/real_estate/shree balaji windpark.jpg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/shree.jpg' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Shree Balaji Windpark</h2>
+                    <h4 style="color:grey;margin:0px"> Shree Balaji Group</h4>
+                    <h4 style="color:grey;margin:0px">Vaishnaodevi</h4>
+                    <h4 style="color:grey;margin:0px">3,4,5,7 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+        <form action="{% url 'sobha' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-top:20px">
+        <div style="width:600px;height:400px;padding-top:5px">
+        <img src="{% static 'img/real_estate/sobha dream heights.jpg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/Sobha Logo.jpg' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Sobha Dream Heights</h2>
+                    <h4 style="color:grey;margin:0px"> Sobha Limited</h4>
+                    <h4 style="color:grey;margin:0px">SP Ring Rd.</h4>
+                    <h4 style="color:grey;margin:0px">1,2 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+        <form action="{% url 'setu' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-right:60px;margin-left:70px;margin-top:20px">
+        <div style="width:600px;padding-top:5px;height:400px">
+        <img src="{% static 'img/real_estate/setu karmyog.jpeg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/setu logo.png' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Setu Karmyog</h2>
+                    <h4 style="color:grey;margin:0px">Setu Group</h4>
+                    <h4 style="color:grey;margin:0px">HL Road</h4>
+                    <h4 style="color:grey;margin:0px">4 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+        <form action="{% url 'saanvi' %}">
+    <div style="float:left;display:block;border:2px solid white;border-radius:7px;background:white;box-shadow: 10px 10px 16px #000000;margin-top:20px">
+        <div style="width:600px;height:400px;padding-top:5px">
+        <img src="{% static 'img/real_estate/saanvi nirman skydeck select.jpg' %}" style ="max-width:100%;max-height:100%;display:block">
+        </div>
+            <div style="background:white">
+            <div style="width:100px;border:2px solid white;float:left;height:119px;background:white ">
+                <img src="{% static 'img/real_estate/saanvi logo.png' %}" style="max-width:100%;max-height:100%;display:block">
+            </div>
+                <div style="float:left;background:white;width:500px">
+                    <h2 style="font-weight:bold">Saanvi Nirman Skydeck</h2>
+                    <h4 style="color:grey;margin:0px"> Saanvi Nirman Group</h4>
+                    <h4 style="color:grey;margin:0px">Bopal</h4>
+                    <h4 style="color:grey;margin:0px">4 BHK</h4>
+                </div>
+                <div style="background:white">
+                    <h4 style="color:grey"> Price on Request </h4>
+                </div>
+                <div style="padding-top:50px;padding-left:480px;padding-bottom:20px;padding-right:10px">
+                    <button type="submit" style="width:120px;background:red;border-radius:7px">See Details</button>
+                </div>
+
+        </div>
+    </div>
+        </form>
+
+
+    </div>
+    <script src="{% static  'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static  'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static  'js/popper.min.js' %}"></script>
+    <script src="{% static  'js/bootstrap.min.js' %}"></script>
+    <script src="{% static  'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static  'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static  'js/ajax-form.js' %}"></script>
+    <script src="{% static  'js/waypoints.min.js' %}"></script>
+    <script src="{% static  'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static  'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static  'js/scrollIt.js' %}"></script>
+    <script src="{% static  'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static  'js/wow.min.js' %}"></script>
+    <script src="{% static  'js/nice-select.min.js' %}"></script>
+    <script src="{% static  'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static  'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static  'js/plugins.js' %}"></script>
+    <script src="{% static  'js/gijgo.min.js' %}"></script>
+    <script src="{% static  'js/slick.min.js' %}"></script>
+
+
+
+    <!--contact js-->
+    <script src="{% static  'js/contact.js' %}"></script>
+    <script src="{% static  'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static  'js/jquery.form.js' %}"></script>
+    <script src="{% static  'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static  'js/mail-script.js' %}"></script>
+
+
+    <script src="{% static  'js/main.js' %}"></script>
+
+
+
+    </body>
+
+</html>

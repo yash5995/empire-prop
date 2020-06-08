@@ -1,0 +1,477 @@
+{% load static %}
+<html>
+<head>
+     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EMPIRE PROPERTIES</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+    #content_wrapper {
+  height: 300px;
+  width: 1000px;
+  background-color:#f7f7f7;
+  position: relative;
+  margin:15%;
+}
+
+.content {
+  height: 230px;
+  width: 90%;
+  background-color:white;
+  position: absolute;
+  margin-left: 5%;
+  margin-top:4%;
+  display: inline-block;
+}
+.content1{
+height:150px;
+width:400px;
+border-right:2px solid #e1e1e1;
+margin:5%;
+float:left;
+}
+.img1{
+max-width:100%;
+max-height:100%;
+display:block;
+}
+.custom-scrollbar{
+     height : 160px;
+     width  : 350px;
+     background : white;
+     float:left;
+     overflow-y : scroll; // it creates the default scrollbar
+}
+.custom-scrollbar::-webkit-scrollbar-track
+{
+<!--	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);-->
+	border-radius: 10px;
+	background-color: white;
+}
+
+.custom-scrollbar::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: white;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color:#0381C7;
+}
+.design{
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #000;
+    text-align: left;
+    line-height: 25px;
+    width: 81%;
+    list-style: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+}
+li{
+    font-size: 16px;
+        font-weight: 200;
+
+font-family: "roboto", sans-serif
+    display: list-item;
+
+}
+.h3{
+margin-top: 0px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 18px;
+    text-align: left;
+}
+.h2{
+color: #333;
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: "roboto", sans-serif
+}
+.container1 {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  top: 400%;
+  width: auto;
+  padding: 16px;
+    margin-left:10%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 10.66%;
+  margin-left:2%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+</style>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+<body>
+<header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+
+                                    <h2 style="color:#ffffff"> Empire Properties</h2>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="{% url 'home' %}">home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="{% url 'calculate' %}">Find your price</a>
+
+                                        </li>
+                                        <li><a href="{% url 'best' %}">Best Properties</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="social_wrap d-flex align-items-center justify-content-end">
+
+                                <div class="number">
+                                    <p>Call us <a href="#">+91 9825916679</a></p>
+                                </div>
+                                <div class="number">
+                                     <a href="{% url 'index' %}" style="margin-left:20px;color:#ffffff">Log Out</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Details</h3>
+                        <p> <a href="index.html">Home</a> / Details </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="content_wrapper">
+  <div class="content">
+    <div class="content1">
+        <img src="{% static 'img/real_estate/setu karmyog 4bhk.jpeg' %}" class="img1">
+
+    </div>
+    <div style="float:left;margin-top:2%">
+        <h2 style="width:130px;color:black;font-weight:bold;float:right;margin-right:10%;font-family:roboto,sans-serif ">Price on Request</h2>
+
+    </div>
+      <div style="float:left;margin-top:2%">
+          <h3 style="font-family:roboto,sans-serif;font-weight: 200;font-size: 20px;">4 BHK, 3422 sqft</h3><br>
+          <i class='fas fa-shower' style='font-size:14px;float:left'>4 Bathrooms</i><br><br>
+          <h3 style="font-family:roboto,sans-serif;font-weight: 60;float:left;margin-right:7%;font-size:20px">Status: Ready to Move</h3><br>
+
+
+      </div>
+  </div>
+</div>
+<h2 style="vertical-align:center" class="h2">Amenities</h2>
+    <div class="custom-scrollbar">
+        <div style="height:150px;margin-left:80px">
+        <h3 class="h3">Sports</h3>
+            <ul class="design">
+        <li>Gymnasium</li>
+        <li>Basketball Court</li>
+        <li>Box Cricket</li>
+        <li>Badminton Court</li>
+        <li>Splash Pool</li>
+        <li>Walk Way</li>
+        <li>Childern's play area</li>
+        <li>Indoor Games</li>
+        </ul>
+        </div>
+    </div>
+    <div class="custom-scrollbar">
+        <div style="height:150px;margin-left:80px">
+        <h3 class="h3">Leisure</h3>
+            <ul class="design">
+        <li>attractive pergola</li>
+        <li>lawn area</li>
+        <li>water element</li>
+        <li>Basement parking</li>
+        <li>open kitchen area</li>
+        <li>24x7 water supply</li>
+        <li>banquet area</li>
+        </ul>
+        </div>
+    </div>
+    <div class="custom-scrollbar">
+        <div style="height:150px;margin-left:80px">
+        <h3 class="h3">Security</h3>
+            <ul class="design">
+        <li>main entry security cabin</li>
+        <li>fire safety system</li>
+        <li>CCTV system</li>
+
+        </ul>
+        </div>
+    </div>
+    <div class="custom-scrollbar">
+        <div style="height:150px;margin-left:80px">
+        <h3 class="h3">Environment</h3>
+            <ul class="design">
+        <li>landscape sitouts</li>
+        <li>potted plants</li>
+
+        </ul>
+        </div>
+    </div>
+
+<h2 class="h2" style="margin-top:20%">Gallery</h2>
+<div class="container1">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="{% static 'img/real_estate/setu karmyog.jpeg' %}" style="width:80%;margin-left:10%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="{% static 'img/real_estate/setu karmyog 2.jpg' %}" style="width:80%;margin-left:10%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="{% static 'img/real_estate/setu karmyog 3.jpg' %}" style="width:80%;margin-left:10%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="{% static 'img/real_estate/setu karmyog 4.jpg' %}" style="width:80%;margin-left:10%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="{% static 'img/real_estate/setu karmyog.jpeg' %}" style="width:80%;margin-left:10%">
+  </div>
+
+
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+<!--  <div class="row">-->
+<!--    <div class="column">-->
+<!--      <img class="demo cursor" src="{% static 'img/real_estate/ganesh maple tree 3.jpg' %}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">-->
+<!--    </div>-->
+<!--    <div class="column">-->
+<!--      <img class="demo cursor" src="{% static 'img/real_estate/ganesh2.jpg' %}" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">-->
+<!--    </div>-->
+<!--    <div class="column">-->
+<!--      <img class="demo cursor" src="{% static 'img/real_estate/ganesh3.jpeg' %}" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">-->
+<!--    </div>-->
+<!--    <div class="column">-->
+<!--      <img class="demo cursor" src="{% static 'img/real_estate/ganesh4.jpg' %}" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">-->
+<!--    </div>-->
+<!--    <div class="column">-->
+<!--      <img class="demo cursor" src="{% static 'img/real_estate/ganesh5.jpg' %}" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">-->
+<!--    </div>-->
+
+<!--  </div>-->
+</div>
+
+<h2 class="h2" style="margin-top:10%">Location</h2>
+<div class="mapouter">
+    <div class="gmap_canvas">
+        <iframe width="800" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=setu%20karmyog&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+<!--        <a href="https://www.embedgooglemap.net">embed google map in web page</a>-->
+    </div>
+    <style>.mapouter{position:relative;text-align:center;height:500px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:800px;margin-left:45%;margin-top:10%}</style></div>
+
+
+
+
+
+<script src="{% static  'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static  'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static  'js/popper.min.js' %}"></script>
+    <script src="{% static  'js/bootstrap.min.js' %}"></script>
+    <script src="{% static  'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static  'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static  'js/ajax-form.js' %}"></script>
+    <script src="{% static  'js/waypoints.min.js' %}"></script>
+    <script src="{% static  'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static  'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static  'js/scrollIt.js' %}"></script>
+    <script src="{% static  'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static  'js/wow.min.js' %}"></script>
+    <script src="{% static  'js/nice-select.min.js' %}"></script>
+    <script src="{% static  'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static  'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static  'js/plugins.js' %}"></script>
+    <script src="{% static  'js/gijgo.min.js' %}"></script>
+    <script src="{% static  'js/slick.min.js' %}"></script>
+
+
+
+    <!--contact js-->
+    <script src="{% static  'js/contact.js' %}"></script>
+    <script src="{% static  'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static  'js/jquery.form.js' %}"></script>
+    <script src="{% static  'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static  'js/mail-script.js' %}"></script>
+
+
+    <script src="{% static  'js/main.js' %}"></script>
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>

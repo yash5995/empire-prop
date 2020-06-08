@@ -1,0 +1,1 @@
+web: gunicorn housingrate.wsgi --log-file

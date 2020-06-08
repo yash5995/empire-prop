@@ -1,0 +1,628 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EMPIRE PROPERTIES</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+
+                                     <h2 style="color:#ffffff"> Empire Properties</h2>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="{% url 'home' %}">home</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="#">Find your price</a>
+
+                                        </li>
+                                        <li><a href="{% url 'best' %}">Best Properties</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="social_wrap d-flex align-items-center justify-content-end">
+
+                                <div class="number">
+                                    <p>Call us <a href="#">+91 9825916679</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Property</h3>
+                        <p> <a href="{% url 'home' %}">Home</a> / Property</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+
+    <!-- appertment_area_start  -->
+<!--    <div class="appertment_area appertment_area2">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_appertment mb-30">-->
+<!--                        <div class="thumb">-->
+<!--                            <img src="img/appertment/1.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="appertment_info">-->
+<!--                            <span>$35.000</span>-->
+<!--                            <a href="#">-->
+<!--                                <h5>Colorful little aprtment</h5>-->
+<!--                            </a>-->
+<!--                            <ul>-->
+<!--                                <li>2BD</li>-->
+<!--                                <li>2BA</li>-->
+<!--                                <li>920 SF</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_appertment mb-30">-->
+<!--                        <div class="thumb">-->
+<!--                            <img src="img/appertment/2.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="appertment_info">-->
+<!--                            <span>$35.000</span>-->
+<!--                            <a href="#">-->
+<!--                                <h5>Colorful little aprtment</h5>-->
+<!--                            </a>-->
+<!--                            <ul>-->
+<!--                                <li>2BD</li>-->
+<!--                                <li>2BA</li>-->
+<!--                                <li>920 SF</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_appertment mb-30">-->
+<!--                        <div class="thumb">-->
+<!--                            <img src="img/appertment/3.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="appertment_info">-->
+<!--                            <span>$35.000</span>-->
+<!--                            <a href="#">-->
+<!--                                <h5>Colorful little aprtment</h5>-->
+<!--                            </a>-->
+<!--                            <ul>-->
+<!--                                <li>2BD</li>-->
+<!--                                <li>2BA</li>-->
+<!--                                <li>920 SF</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_appertment mb-30">-->
+<!--                        <div class="thumb">-->
+<!--                            <img src="img/appertment/1.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="appertment_info">-->
+<!--                            <span>$35.000</span>-->
+<!--                            <a href="#">-->
+<!--                                <h5>Colorful little aprtment</h5>-->
+<!--                            </a>-->
+<!--                            <ul>-->
+<!--                                <li>2BD</li>-->
+<!--                                <li>2BA</li>-->
+<!--                                <li>920 SF</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_appertment mb-30">-->
+<!--                        <div class="thumb">-->
+<!--                            <img src="img/appertment/1.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="appertment_info">-->
+<!--                            <span>$35.000</span>-->
+<!--                            <a href="#">-->
+<!--                                <h5>Colorful little aprtment</h5>-->
+<!--                            </a>-->
+<!--                            <ul>-->
+<!--                                <li>2BD</li>-->
+<!--                                <li>2BA</li>-->
+<!--                                <li>920 SF</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-6">-->
+<!--                    <div class="single_appertment mb-30">-->
+<!--                        <div class="thumb">-->
+<!--                            <img src="img/appertment/1.png" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="appertment_info">-->
+<!--                            <span>$35.000</span>-->
+<!--                            <a href="#">-->
+<!--                                <h5>Colorful little aprtment</h5>-->
+<!--                            </a>-->
+<!--                            <ul>-->
+<!--                                <li>2BD</li>-->
+<!--                                <li>2BA</li>-->
+<!--                                <li>920 SF</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- appertment_area_end  -->
+    
+    <form action="{% url 'prediction' %}" method="POST">
+    {% csrf_token %}
+
+<select id="rooms" name="rooms"  style="box-shadow: 10px 10px 16px #000000;margin-bottom:30%;border:2px solid black;border-radius:10px;color:#ff2424;vertical-align: middle; background-color:white;width:150px;height:70px;margin-top:160px;margin-left:5%">
+    <option value="roomsize">Room Size</option>
+    <option value="1" {% if rooms == 1 %} selected {% endif %}>1</option>
+    <option value="2" {% if rooms == 2 %} selected {% endif %}>2</option>
+    <option value="3" {% if rooms == 3 %} selected {% endif %}>3</option>
+    <option value="4"{% if rooms == 4 %} selected {% endif %}>4</option>
+    <option value="5"{% if rooms == 5 %} selected {% endif %}>5</option>
+    <option value="6"{% if rooms == 6 %} selected {% endif %}>6</option>
+    <option value="7"{% if rooms == 7 %} selected {% endif %}>7</option>
+    <option value="8"{% if rooms == 8 %} selected {% endif %}>8</option>
+</select>
+
+<select id="area" name="area" style="box-shadow: 10px 10px 16px #000000;margin-bottom:30%;border:2px solid black;border-radius:10px;color:#ff2424;vertical-align: middle;background-color:white;width:150px;height:70px;margin-top:160px;margin-left:5%">
+    <option value="1">Area</option>
+    <option value="Ambavadi" {% if area == 'Ambavadi' %} selected {% endif %}> Ambavadi</option>
+    <option value="Ambli" {% if area == 'Ambli' %} selected {% endif %}> Ambli</option>
+    <option value="Amraiwadi"{% if area == 'Amraiwadi' %} selected {% endif %}>Amraiwadi </option>
+    <option value="Asarwa"{% if area == 'Asarva' %} selected {% endif %}> Asarwa</option>
+    <option value="Ashok Vatika"{% if area == 'Ashok Vatika' %} selected {% endif %}>Ashok Vatika </option>
+     <option value="Ashram Road"{% if area == 'Ashram Road' %} selected {% endif %}>Ashram Road </option>
+     <option value="Aslali"{% if area == 'Aslali' %} selected {% endif %}>Aslali </option>
+     <option value="Astodia Chakla"{% if area == 'Astodia Chakla' %} selected {% endif %}>Astodia Chakla </option>
+     <option value="Ayojan Nagar"{% if area == 'Ayojan Nagar' %} selected {% endif %}>Ayojan Nagar </option>
+     <option value="Bagodra"{% if area == 'Bagodra' %} selected {% endif %}> Bagodra</option>
+     <option value="Bapunagar"{% if area == 'Bapunagar' %} selected {% endif %}>Bapunagar </option>
+     <option value="Bavla"{% if area == 'Bavla' %} selected {% endif %}> Bavla</option>
+     <option value="Bhadaj"{% if area == 'Bhadaj' %} selected {% endif %}>Bhadaj </option>
+     <option value="Bhadra"{% if area == 'Bhadra' %} selected {% endif %}>Bhadra </option>
+     <option value="Bhat"{% if area == 'Bhat' %} selected {% endif %}> Bhat</option>
+     <option value="Bodakdev"{% if area == 'Bodakdev' %} selected {% endif %}>Bodakdev </option>
+     <option value="Bopal"{% if area == 'Bopal' %} selected {% endif %}>Bopal </option>
+     <option value="CG Road"{% if area == 'CG Road' %} selected {% endif %}>CG Road </option>
+    <option value="Chanakyapuri" {% if area == 'Chanakyapuri' %} selected {% endif %}> Chanakyapuri</option>
+     <option value="Chandkheda"{% if area == 'Chandkheda' %} selected {% endif %}> Chandkheda</option>
+     <option value="Chandlodia"{% if area == 'Chandlodia' %} selected {% endif %}> Chandlodia</option>
+     <option value="Chharodi"{% if area == 'Chharodi' %} selected {% endif %}> Changodhar</option>
+     <option value="CTM"{% if area == 'CTM' %} selected {% endif %}> CTM</option>
+     <option value="CTM Ramol Road"{% if area == 'CTM Ramol Road' %} selected {% endif %}>CTM Ramol Road </option>
+     <option value="Dariyapur"{% if area == 'Dariyapur' %} selected {% endif %}>Dariyapur </option>
+     <option value="Daxini Society"{% if area == 'Daxini Society' %} selected {% endif %}> Daxini Society</option>
+     <option value="Dholera"{% if area == 'Dholera' %} selected {% endif %}> Dholera</option>
+     <option value="Dudheshwar"{% if area == 'Dudheshwar' %} selected {% endif %}> Dudheshwar</option>
+     <option value="Ellisbridge"{% if area == 'Ellisbridge' %} selected {% endif %}> Ellisbridge</option>
+     <option value="Fatasa pol"{% if area == 'Fatasa Pol' %} selected {% endif %}> Fatasa Pol</option>
+     <option value="Gandhinagar Road"{% if area == 'Gandhinagar Road' %} selected {% endif %}> Gandhinagar Road</option>
+     <option value="Geratpur"{% if area == 'Geratpur' %} selected {% endif %}> Geratpur</option>
+     <option value="Ghatlodiya"{% if area == 'Ghatlodiya' %} selected {% endif %}> Ghatlodiya</option>
+     <option value="Ghodasar"{% if area == 'Ghodasar' %} selected {% endif %}> Ghodasar</option>
+     <option value="Ghuma"{% if area == 'Ghuma' %} selected {% endif %}> Ghuma</option>
+     <option value="Godhavi"{% if area == 'Godhavi' %} selected {% endif %}> Godhavi</option>
+     <option value="Gokuldham"{% if area == 'Gokuldham' %} selected {% endif %}>Gokuldham </option>
+     <option value="Gota"{% if area == 'Gota' %} selected {% endif %}>Gomtipur </option>
+     <option value="Gulbai Tekra"{% if area == 'Gulbai Tekra' %} selected {% endif %}> Gulbai Tekra</option>
+     <option value="Gurukul"{% if area == 'Gurukul' %} selected {% endif %}> Gurukul</option>
+     <option value="Hansol"{% if area == 'Hansol' %} selected {% endif %}> Hansol</option>
+     <option value="Hathijan"{% if area == 'Hathijan' %} selected {% endif %}> Hathijan</option>
+     <option value="Hebatpur"{% if area == 'Hebatpur' %} selected {% endif %}> Hebatpur</option>
+    <option value="Hatkeshwar"{% if area == 'Hatkeshwar' %} selected {% endif %}>Hatkeshwar </option>
+     <option value="Isanpur"{% if area == 'Isanpur' %} selected {% endif %}>Isanpur </option>
+    <option value="Jagatpur"{% if area == 'Jagatpur' %} selected {% endif %}> Jagatpur</option>
+    <option value="Jivraj Park"{% if area == 'Jivraj Park' %} selected {% endif %}> Jivraj Park</option>
+     <option value="Jodhpur"{% if area == 'Jodhpur' %} selected {% endif %}>Jodhpur </option>
+     <option value="Jodhpur Village"{% if area == 'Jodhpur Village' %} selected {% endif %}>Jodhpur village </option>
+     <option value="Juhapura"{% if area == 'Juhapura' %} selected {% endif %}> Juhapura</option>
+     <option value="Kalupur"{% if area == 'Kalupur' %} selected {% endif %}> Kalupur</option>
+     <option value="Kankaria"{% if area == 'Kankaria' %} selected {% endif %}> Kankaria</option>
+     <option value="Khadia"{% if area == 'Khadia' %} selected {% endif %}> Khadia</option>
+     <option value="Khanpur"{% if area == 'Khanpur' %} selected {% endif %}> Khanpur</option>
+     <option value="Khodiyar"{% if area == 'Khodiyar' %} selected {% endif %}> Khodiyar</option>
+     <option value="Khokhra"{% if area == 'Khokhra' %} selected {% endif %}> Khokhra</option>
+     <option value="Kolat"{% if area == 'Kolat' %} selected {% endif %}> Kolat</option>
+     <option value="Kotarpur"{% if area == 'Kotarpur' %} selected {% endif %}> Kotarpur</option>
+     <option value="Koteshwar"{% if area == 'Koteshwar' %} selected {% endif %}> Koteshwar</option>
+     <option value="Lambha"{% if area == 'Lambha' %} selected {% endif %}> Lambha</option>
+     <option value="Lapkaman"{% if area == 'Lapkaman' %} selected {% endif %}> Lapkaman</option>
+     <option value="Lilapur"{% if area == 'Lilapur' %} selected {% endif %}> Lilapur</option>
+     <option value="Madhupura"{% if area == 'Madhupura' %} selected {% endif %}> Madhupura</option>
+     <option value="Mahadev Nagar"{% if area == 'Mahadev Nagar' %} selected {% endif %}> Mahadev Nagar</option>
+     <option value="Makarba"{% if area == 'Makarba' %} selected {% endif %}> Makarba</option>
+     <option value="Maninagar"{% if area == 'Maninagar' %} selected {% endif %}> Maninagar</option>
+     <option value="Manipur"{% if area == 'Manipur' %} selected {% endif %}> Manipur</option>
+     <option value="Meghani Nagar"{% if area == 'Meghani Nagar' %} selected {% endif %}> Meghani Nagar</option>
+     <option value="Memnagar"{% if area == 'Memnagar' %} selected {% endif %}> Memnagar</option>
+     <option value="Motera"{% if area == 'Motera' %} selected {% endif %}> Motera</option>
+     <option value="Nana Chiloda"{% if area == 'Nana Chiloda' %} selected {% endif %}> Nana Chiloda</option>
+     <option value="Naranpura Road"{% if area == 'Naranpura Road' %} selected {% endif %}> Naranpura Road</option>
+     <option value="Naranpuraa"{% if area == 'Naranpuraa' %} selected {% endif %}> Naranpuraa</option>
+    <option value="Narayan Nagar"{% if area == 'Narayan Nagar' %} selected {% endif %}> Narayan Nagar</option>
+    <option value="Naroda"{% if area == 'Naroda' %} selected {% endif %}> Naroda</option>
+     <option value="Narol"{% if area == 'Narol' %} selected {% endif %}> Narol</option>
+     <option value="Narolgam"{% if area == 'Narolgam' %} selected {% endif %}> Narolgam</option>
+    <option value="Nava Vadaj"{% if area == 'Nava Vadaj' %} selected {% endif %}> Nava Vadaj</option>
+     <option value="Navrangpura"{% if area == 'Navarangpura' %} selected {% endif %}> Navrangpura</option>
+     <option value="Near Nirma University"{% if area == 'Near Nirma University' %} selected {% endif %}> Near Nirma University</option>
+     <option value="Near Vaishnodevi"{% if area == 'Near Vaishnodevi' %} selected {% endif %}> Near Vaishnodevi</option>
+     <option value="Nehru Nagar"{% if area == 'Nehru Nagar' %} selected {% endif %}> Nehru Nagar</option>
+     <option value="New Maninagar"{% if area == 'New Maninagar' %} selected {% endif %}> New Maninagar</option>
+     <option value="New Ranip"{% if area == 'New Ranip' %} selected {% endif %}> New Ranip</option>
+     <option value="Neww CG Road"{% if area == 'Neww CG Road' %} selected {% endif %}> Neww CG Road</option>
+     <option value="Nikol"{% if area == 'Nikol' %} selected {% endif %}> Nikol</option>
+     <option value="Nirnay Nagar"{% if area == 'Nirnay Nagar' %} selected {% endif %}> Nirnay Nagar</option>
+     <option value="Odhav"{% if area == 'Odhav' %} selected {% endif %}> Odhav</option>
+     <option value="Paldi"{% if area == 'Paldi' %} selected {% endif %}> Paldi</option>
+     <option value="Palodia"{% if area == 'Palodia' %} selected {% endif %}> palodia</option>
+     <option value="Prahlad Nagar"{% if area == 'Prahlad Nagar' %} selected {% endif %}> Prahlad Nagar</option>
+     <option value="Rambaug"{% if area == 'Rambaug' %} selected {% endif %}> Rambaug</option>
+     <option value="Ramdev Nagar"{% if area == 'Ramdev Nagar' %} selected {% endif %}> Ramdev Nagar</option>
+     <option value="Rancharda"{% if area == 'Rancharda' %} selected {% endif %}> Rancharda</option>
+     <option value="Ranip"{% if area == 'Ranip' %} selected {% endif %}> Ranip</option>
+     <option value="Sabarmati"{% if area == 'Sabarmati' %} selected {% endif %}> Sabarmati</option>
+     <option value="Sanand"{% if area == 'Sanand' %} selected {% endif %}> Sanand</option>
+     <option value="Sanathal"{% if area == 'Sanathal' %} selected {% endif %}> Sanathal</option>
+    <option value="Santej"{% if area == 'Santej' %} selected {% endif %}> Santej</option>
+     <option value="Saraspur"{% if area == 'Saraspur' %} selected {% endif %}> Saraspur</option>
+     <option value="Sarkhej"{% if area == 'Sarkhej' %} selected {% endif %}> Sarkhej</option>
+     <option value="Satellite"{% if area == 'Satellite' %} selected {% endif %}> Satellite</option>
+     <option value="Science City"{% if area == 'Science City' %} selected {% endif %}> Science City</option>
+     <option value="Shahibaug"{% if area == 'Shahibaug' %} selected {% endif %}> Shahibaug</option>
+     <option value="Shahpur"{% if area == 'Shahpur' %} selected {% endif %}> Shahpur</option>
+     <option value="Shantipura"{% if area == 'Shantipura' %} selected {% endif %}> Shantipura</option>
+     <option value="Shela"{% if area == 'Shela' %} selected {% endif %}> Shela</option>
+     <option value="Shilaj"{% if area == 'Shilaj' %} selected {% endif %}> Shilaj</option>
+     <option value="Shyamal Cross road"{% if area == 'Shyamal Cross Road' %} selected {% endif %}> Shyamal Cross Road</option>
+     <option value="Sindhu Bhavan Marg"{% if area == 'Sindhu Bhavan Marg' %} selected {% endif %}> Sindhu Bhavan Marg</option>
+     <option value="Sola"{% if area == 'Sola' %} selected {% endif %}> Sola</option>
+     <option value="South Bopal"{% if area == 'South Bopal' %} selected {% endif %}> South Bopal</option>
+    <option value="SP Ring Road"{% if area == 'SP Ring Road' %} selected {% endif %}> SP Ring Road</option>
+     <option value="Sughad"{% if area == 'Sughad' %} selected {% endif %}> Sughad</option>
+     <option value="Thakkarbapa Nagar"{% if area == 'Thakkarbapa Nagar' %} selected {% endif %}> Thakkarbapa Nagar</option>
+    <option value="Thaltej"{% if area == 'Thaltej' %} selected {% endif %}> Thaltej</option>
+     <option value="Tragad"{% if area == 'Tragad' %} selected {% endif %}> Tragad</option>
+     <option value="Usmanpura"{% if area == 'Usmanpura' %} selected {% endif %}> Usmanpura</option>
+    <option value="Vadsar"{% if area == 'Vadsar' %} selected {% endif %}> Vadsar</option>
+     <option value="Vaishnodevi"{% if area == 'Vaishnodevi' %} selected {% endif %}> Vaishnodevi</option>
+     <option value="Vasna"{% if area == 'Vasna' %} selected {% endif %}> Vasna</option>
+     <option value="Vastral"{% if area == 'Vastral' %} selected {% endif %}> Vastral</option>
+     <option value="Vastrapur"{% if area == 'vastrapur' %} selected {% endif %}> Vastrapur</option>
+    <option value="Vatva"{% if area == 'Vatva' %} selected {% endif %}> Vatva</option>
+     <option value="Vejalpur"{% if area == 'Vejalpur' %} selected {% endif %}> Vejalpur</option>
+     <option value="Vinzol"{% if area == 'Vinzol' %} selected {% endif %}> Vinzol</option>
+     <option value="Vishala"{% if area == 'Vishala' %} selected {% endif %}> </option>
+      </select>
+
+
+    <textarea id="square_foot" name="square_foot" style="box-shadow: 10px 10px 16px #000000;margin-bottom:30%;border:2px solid black;border-radius:10px;color:#ff2424;vertical-align: middle; width:150px;height:70px;margin-top:160px;overflow:hidden;background-color:white;margin-left:5%" placeholder="Enter Square Foot">{{square_foot}}</textarea>
+    <style>
+        ::placeholder{
+        color:#ff2424;
+        }
+    </style>
+    <select id="construction_status" name="construction_status" style="box-shadow: 10px 10px 16px #000000;margin-bottom:30%;border:2px solid black;border-radius:10px;color:#ff2424;vertical-align: middle;background-color:white;width:150px;height:70px;margin-top:160px;margin-left:5%">
+        <option value="1">Construction Status </option>
+        <option value="Ready to move" {% if construction == 'Ready to move' %} selected {% endif %}> Ready to move</option>
+        <option value="Under Construction" {% if construction == 'Under Construction' %} selected {% endif %}>Under Construction</option>
+        <option value="Resale"{% if construction == 'Resale' %} selected {% endif %}>Resale</option>
+    </select>
+    <select id="bathroom" name="bathroom" style="box-shadow: 10px 10px 16px #000000;margin-bottom:30%;border:2px solid black;border-radius:10px;color:#ff2424;vertical-align: middle;background-color:white;width:150px;height:70px;margin-top:160px;margin-left:5%">
+        <option value="1">Bathroom</option>
+        <option value="1" {% if bathroom == 1 %} selected {% endif %}>1</option>
+        <option value="2"{% if bathroom == 2 %} selected {% endif %}>2</option>
+        <option value="3"{% if bathroom == 3 %} selected {% endif %}>3</option>
+        <option value="4"{% if bathroom == 4 %} selected {% endif %}>4</option>
+        <option value="5"{% if bathroom == 5 %} selected {% endif %}>5</option>
+        <option value="6"{% if bathroom == 6 %} selected {% endif %}>6</option>
+        <option value="7"{% if bathroom == 7 %} selected {% endif %}>7</option>
+        <option value="8"{% if bathroom == 8 %} selected {% endif %}>8</option>
+
+    </select>
+    <button style="box-shadow: 10px 10px 16px #000000;margin-bottom:30%;border:2px solid black;border-radius:10px;color:#ff2424;width:150px;height:70px;margin-top:160px;vertical-align:middle;margin-left:5%" id="output">Submit</button>
+        {% if context %}
+        <textarea style="box-shadow: 10px 10px 16px #000000;border:2px solid black;border-radius:10px;color:#ff2424;vertical-align: middle; width:150px; height:70px;overflow:hidden;margin-top:-30%;margin-left:40%" > {{context}}</textarea>
+        {% endif %}
+
+</form>
+
+    
+    <!-- testimonial_area  -->
+<!--    <div class="testimonial_area">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-xl-12">-->
+<!--                    <div class="testmonial_active owl-carousel">-->
+<!--                        <div class="single_carousel">-->
+<!--                            <div class="row justify-content-center">-->
+<!--                                <div class="col-lg-9">-->
+<!--                                    <div class="single_testmonial text-center">-->
+<!--                                        <div class="author_thumb">-->
+<!--                                            <img src="img/testmonial/author.png" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="testmonial_author">-->
+<!--                                            <h3>Margaret Lawson</h3>-->
+<!--                                            <span>Creative Director</span>-->
+<!--                                        </div>-->
+<!--                                        <p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="single_carousel">-->
+<!--                            <div class="row justify-content-center">-->
+<!--                                <div class="col-lg-9">-->
+<!--                                    <div class="single_testmonial text-center">-->
+<!--                                        <div class="author_thumb">-->
+<!--                                            <img src="img/testmonial/author2.png" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="testmonial_author">-->
+<!--                                            <h3>Margaret Lawson</h3>-->
+<!--                                            <span>Creative Director</span>-->
+<!--                                        </div>-->
+<!--                                        <p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="single_carousel">-->
+<!--                            <div class="row justify-content-center">-->
+<!--                                <div class="col-lg-9">-->
+<!--                                    <div class="single_testmonial text-center">-->
+<!--                                        <div class="author_thumb">-->
+<!--                                            <img src="img/testmonial/author2.png" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="testmonial_author">-->
+<!--                                            <h3>Margaret Lawson</h3>-->
+<!--                                            <span>Creative Director</span>-->
+<!--                                        </div>-->
+<!--                                        <p>“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- /testimonial_area  -->
+    <!-- quotation_area_start  -->
+<!--    <div class="quotation_area ex_margin">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-12">-->
+<!--                    <div class="quotation_text d-flex align-items-center justify-content-between">-->
+<!--                        <div class="quotation_info">-->
+<!--                            <h3>Get a free <br>-->
+<!--                                quotation Today!</h3>-->
+<!--                                <p>Have any questions in mind?</p>-->
+<!--                            <a href="#" class="boxed-btn3">Contact Us</a>-->
+<!--                        </div>-->
+<!--                        <div class="sayhello d-flex align-items-center">-->
+<!--                            <div class="icon">-->
+<!--                                <i class="fa fa-phone"></i>-->
+<!--                            </div>-->
+<!--                            <div class="num">-->
+<!--                                <span>say Hello,</span>-->
+<!--                                <h3>+44 563 986 4785 </h3>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <!-- footer_start  -->
+<!--    <footer class="footer footer_bg_1">-->
+<!--        <div class="footer_top">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-xl-3 col-md-6 col-lg-3">-->
+<!--                        <div class="footer_widget ">-->
+<!--                            <h3 class="footer_title">-->
+<!--                                About Us-->
+<!--                            </h3>-->
+<!--                            <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open</p>-->
+<!--                            <div class="footer_logo">-->
+<!--                                <a href="#">-->
+<!--                                    <img src="img/footer_logo.png" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-xl-3 col-md-6 col-lg-3">-->
+<!--                        <div class="footer_widget ">-->
+<!--                            <h3 class="footer_title">-->
+<!--                                Contact Info-->
+<!--                            </h3>-->
+<!--                            <p>Address :Your address goes-->
+<!--                                here, your demo address.</p>-->
+<!--                            <ul>-->
+<!--                                <li><a href="#">Phone : +8880 44338899</a></li>-->
+<!--                                <li><a href="#">Email : info@colorlib.com</a></li>-->
+<!--                            </ul>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-xl-3 col-md-6 col-lg-3">-->
+<!--                        <div class="footer_widget ">-->
+<!--                            <h3 class="footer_title">-->
+<!--                                Important Link-->
+<!--                            </h3>-->
+<!--                            <ul>-->
+<!--                                <li><a href="#">View Project</a></li>-->
+<!--                                <li><a href="#">Contact Us</a></li>-->
+<!--                                <li><a href="#">Testimonial</a></li>-->
+<!--                                <li><a href="#">Proparties</a></li>-->
+<!--                                <li><a href="#">Support</a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-xl-3 col-md-6 col-lg-3">-->
+<!--                        <div class="footer_widget">-->
+<!--                            <h3 class="footer_title">-->
+<!--                                Newsletter-->
+<!--                            </h3>-->
+<!--                            <p class="newsletter_text">-->
+<!--                                Heaven fruitful doesn't over lesser in days. Appear creeping seasons-->
+<!--                            </p>-->
+<!--                            <form action="#" class="newsletter_form">-->
+<!--                                <input type="text" placeholder="Enter your mail">-->
+<!--                                <button type="submit"> <i class="fa fa-paper-plane"></i> </button>-->
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="copy-right_text">-->
+<!--            <div class="container">-->
+<!--                <div class="footer_border"></div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-8">-->
+<!--                        <p class="copy_right">-->
+<!--                            <p>&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;-->
+<!--  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
+<!--  &lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;</p>-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4">-->
+<!--                        <div class="socail_links">-->
+<!--                            <ul>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        <i class="ti-facebook"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        <i class="fa fa-twitter"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        <i class="fa fa-dribbble"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        <i class="fa fa-behance"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </footer>-->
+    <!-- footer_end  -->
+
+
+    <!-- JS here -->
+    <script src="{% static '/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static '/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static '/popper.min.js' %}"></script>
+    <script src="{% static '/bootstrap.min.js' %}"></script>
+    <script src="{% static '/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/ajax-form.js' %}"></script>
+    <script src="{% static '/waypoints.min.js' %}"></script>
+    <script src="{% static '/jquery.counterup.min.js' %}"></script>
+    <script src="{% static '/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static '/scrollIt.js' %}"></script>
+    <script src="{% static '/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static '/wow.min.js' %}"></script>
+    <script src="{% static '/nice-select.min.js' %}"></script>
+    <script src="{% static '/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static '/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static '/plugins.js' %}"></script>
+    <script src="{% static '/gijgo.min.js' %}"></script>
+    <script src="{% static '/slick.min.js' %}"></script>
+   
+
+    
+    <!--contact js-->
+    <script src="{% static '/contact.js' %}"></script>
+    <script src="{% static '/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static '/jquery.form.js' %}"></script>
+    <script src="{% static '/jquery.validate.min.js' %}"></script>
+    <script src="{% static '/mail-script.js' %}"></script>
+
+
+    <script src="{% static '/main.js' %}"></script>
+
+</body>
+
+</html>
