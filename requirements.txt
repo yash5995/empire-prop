@@ -14,7 +14,7 @@ joblib==0.14.1
 kiwisolver==1.2.0
 matplotlib==3.2.1
 mysqlclient==1.4.6
-numpy==1.18.2
+numpy==1.22.0
 pandas==1.0.3
 psycopg2==2.8.5
 PyMySQL==0.9.3
